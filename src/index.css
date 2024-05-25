@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary-bg: #082132;
+  --secondary-bg: #1f2937;
+}
+
+/* :root {
+    --blue-100: #c5cae9;
+    --blue-600: #2f6f9f;
+    --blue-200: #87ceeb;
+    --blue-500: #3498db;
+  }
+  :root {
+    --dark-blue-800: #2f365f;
+    --blue-300: #63b3ed;
+    --blue-700: #2a3f54;
+    --blue-200: #56c2e5;
+  } */
+
+.nav-link {
+  @apply relative;
+}
+
+.nav-link::after {
+  @apply absolute -bottom-[4px] left-0 w-full h-1 hidden bg-gray-500  transition-all duration-100;
+  content: "";
+}
+
+.nav-link:hover::after {
+  @apply block duration-200;
+}
+
+/* *********************************
+.dark-mode {
+  background-color: var(--blue-800);
+  color: var(--blue-300);
+}
+
+.dark-mode:hover {
+  background-color: var(--blue-700);
+  color: var(--blue-200);
+}
+
+.light-mode {
+  background-color: var(--blue-100);
+  color: var(--blue-600);
+}
+
+.light-mode:hover {
+  background-color: var(--blue-200);
+  color: var(--blue-500);
+}
+ */
