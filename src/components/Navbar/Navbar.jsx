@@ -13,6 +13,7 @@ import { toggleDarkMode } from "../../store/themeSlice";
 export default function Navbar() {
   const currentTheme = useSelector((state) => state.theme);
   const [DarkMode, setDarkMode] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dispatch = useDispatch();
   const handleDarkMode = () => {
     dispatch(toggleDarkMode());
@@ -54,7 +55,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <div className="w-full px-3 py-1 dark:bg-[#082132] bg-zinc-100">
+    <div className="w-full px-3 py-1 boder-2 dark:border-gray-200 dark:bg-[#082132] bg-zinc-100">
       <div className="nav relative w-full flex justify-between items-center">
         <div className="nav_left">
           <div className="logo w-[] p-1">
@@ -83,17 +84,22 @@ export default function Navbar() {
         <div className="icons text-black flex gap-3">
           <li
             onClick={() => handleDarkMode()}
-            className="w-[40px] dark:text-white text-black dark:bg-gray-600 h-[40px] cursor-pointer text-185px] grid place-items-center bg-gray-200 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700">
+            className="w-[35px] dark:text-white text-black dark:bg-gray-600 h-[35px] cursor-pointer text-[15px] grid place-items-center bg-gray-200 rounded-full border-gray-400 dark:hover:boder-gray-100  hover:border-[1px] hover:bg-gray-300 dark:hover:bg-gray-700">
             {DarkMode ? <FaMoon /> : <FaSun />}
           </li>
-          <li className="w-[40px] dark:text-white text-black dark:bg-gray-600 sm:hidden h-[40px] cursor-pointer text-185px] grid place-items-center bg-gray-200 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700">
+          <li
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`w-[35px]  dark:text-white text-black dark:bg-gray-600 sm:hidden h-[35px] cursor-pointer text-[15px] grid place-items-center bg-gray-200 rounded-full border-gray-400 dark:hover:boder-gray-100  hover:border-[1px] hover:bg-gray-300 dark:hover:bg-gray-700`}>
             <GiHamburgerMenu />
           </li>
         </div>
 
         {/* ----------mobile menu---------- */}
-        <div className="nav-mobile sm:hidden absolute -bottom-[175px] w-[180px] bg-gray-200 dark:bg-gray-600 right-0 rounded overflow-hidden">
-          <ul className="menu  text-black gap-10 ">
+        <div
+          className={`nav-mobile sm:hidden absolute ${
+            isMenuOpen ? "block" : "hidden"
+          }  -bottom-[175px] w-[180px] bg-gray-200 dark:bg-gray-600 right-0 rounded overflow-hidden`}>
+          <ul className="menu  text-black gap-10 select-none">
             {links.map((link, index) => (
               <li
                 key={link.id}
