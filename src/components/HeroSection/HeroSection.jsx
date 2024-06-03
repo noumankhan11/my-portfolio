@@ -1,5 +1,11 @@
 import React from "react";
 import GroupBtn from "../GroupBtn";
+import { FaArrowRight } from "react-icons/fa";
+import {
+  IoIosCodeWorking,
+  IoIosContact,
+  IoIosPaper,
+} from "react-icons/io";
 
 export default function HeroSection() {
   return (
@@ -32,10 +38,40 @@ export default function HeroSection() {
           </div>
           <div className="right p-3 w-fit min-w-[350px] bg-yellow-00 text-center">
             <div className="Main-buttons_menu">
-              <div className="container">
-                <GroupBtn />
-                <GroupBtn />
-                <GroupBtn />
+              <div className="container flex flex-col gap-2">
+                <GroupBtn
+                  firstBg="red"
+                  middleBg="indigo"
+                  lastBg={"pink"}
+                  text={"What i have made"}
+                  icon={<IoIosCodeWorking />}
+                  slug={"/#"}
+                  title={"Project"}
+                  textColor={"red"}
+                  iconColor={"teal"}
+                />
+                <GroupBtn
+                  firstBg={"fuchsia"}
+                  middleBg={"indigo"}
+                  lastBg={"pink"}
+                  text={"Read about me"}
+                  icon={<IoIosContact />}
+                  slug={"/#"}
+                  title={"About"}
+                  textColor={"red"}
+                  iconColor={"teal"}
+                />
+                <GroupBtn
+                  firstBg={"fuchsia"}
+                  middleBg={"indigo"}
+                  lastBg={"pink"}
+                  text={"Download resume"}
+                  icon={<IoIosPaper />}
+                  slug={"/#"}
+                  title={"Resume"}
+                  textColor={"red"}
+                  iconColor={"teal"}
+                />
               </div>
             </div>
           </div>
