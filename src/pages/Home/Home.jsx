@@ -1,5 +1,10 @@
 import React from "react";
-import { Navbar, HeroSection, SkillSection } from "../../components";
+import {
+  Navbar,
+  HeroSection,
+  SkillSection,
+  Footer,
+} from "../../components";
 
 export default function Home() {
   return (
@@ -7,6 +12,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <SkillSection />
+      <Footer />
     </div>
   );
 }

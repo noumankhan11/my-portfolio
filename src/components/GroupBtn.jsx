@@ -13,7 +13,7 @@ export default function GroupBtn({
   textColor,
 }) {
   return (
-    <div className="relative group cursor-pointer my-3 md:my-4">
+    <div className="relative w-[90vw] sm:w-auto group cursor-pointer my-3 md:my-4">
       <div
         style={{
           background: `linear-gradient(to right,${firstBg}, ${middleBg}, ${lastBg})`,

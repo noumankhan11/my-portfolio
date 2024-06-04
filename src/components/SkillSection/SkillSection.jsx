@@ -60,7 +60,7 @@ export default function SkillSection() {
     <div>
       <div
         style={{ background: !dark ? "#f7f7f7" : "transparent" }}
-        className="w-full min-h-screen ">
+        className="w-full min-h-screen py-4">
         <div className="p-4">
           <h1 className="text-3xl text-left sm:text-4xl mb-5 tracking-wider font-bold md:text-center dark:text-gray-200">
             My Skills
