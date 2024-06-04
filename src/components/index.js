@@ -1,6 +1,6 @@
 import GroupBtn from "./GroupBtn";
 import HeroSection from "./HeroSection/HeroSection";
 import Navbar from "./Navbar/Navbar";
-GroupBtn;
+import SkillSection from "./SkillSection/SkillSection";
 
-export { Navbar, HeroSection, GroupBtn };
+export { Navbar, HeroSection, GroupBtn, SkillSection };

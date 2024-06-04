@@ -10,21 +10,26 @@ import {
 export default function HeroSection() {
   return (
     <div>
-      <div className="hero-section h-[calc(100vh-70px)]  flex items-center pb-9">
-        <div className="container w-full flex items-center justify-between">
-          <div className="left-main_info w-[60%] p-3">
+      <div className="hero-section select-none h-full md:h-[calc(100vh-70px)] w-full flex items-center justify-start md:justify-center before:backdrop:pb-9">
+        <div className="container w-[100vw] pt-7 md:pt-0 flex items-start md:items-center justify-between flex-col md:flex-row">
+          <div className="left-main_info w-full md:w-[60%] p-3 ">
             <div className="mb-6">
-              <h1 className="text-5xl font-bold mb-4 text-fuchsia-600">
-                Hello there! I'm Nomi
+              <h1 className="text-[11vw] leading-[100%] sm:text-[8vw] md:text-5xl font-bold mb-4 text-[#345266] dark:text-gray-200">
+                Hello there! I'm{" "}
+                <span className="text-[#4a4aed] dark:text-[#6da4c0] font-extrabold">
+                  Nomi
+                </span>
               </h1>
-              <h3 className="text-[28px] font-semibold text-indigo-600">
+              <h3 className="text-xl sm:text-[24px] font-semibold text-[#3a5693] dark:text-[#8fafc5]">
                 A passionate Front-end Developer & aspiring Full-stack
                 Developer
               </h3>
             </div>
             <div className="">
-              <p className="font-semibold text-[18px]">About me</p>
-              <h4 className="text-pink-800">
+              <p className="font-semibold text-[18px] text-gray-800 dark:text-gray-200">
+                About me
+              </p>
+              <h4 className="text-gray-600 dark:text-gray-300">
                 I'm a self-taught developer with a strong foundation
                 in Front-end development using React. I'm now eager to
                 expand my skills to become a proficient Full-stack
@@ -36,9 +41,9 @@ export default function HeroSection() {
               </h4>
             </div>
           </div>
-          <div className="right p-3 w-fit min-w-[350px] bg-yellow-00 text-center">
-            <div className="Main-buttons_menu">
-              <div className="container flex flex-col gap-2">
+          <div className="right px-0 md:p-3  w-full md:w-[350px] my-2 text-center">
+            <div className="Main-buttons_menu mx-auto w-fit">
+              <div className="container flex flex-col gap-0 md:gap-2">
                 <GroupBtn
                   firstBg="#537cb9c2"
                   middleBg="#32409baa"
