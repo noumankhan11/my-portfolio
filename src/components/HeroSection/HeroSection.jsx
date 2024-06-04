@@ -40,37 +40,37 @@ export default function HeroSection() {
             <div className="Main-buttons_menu">
               <div className="container flex flex-col gap-2">
                 <GroupBtn
-                  firstBg="red"
-                  middleBg="indigo"
-                  lastBg={"pink"}
+                  firstBg="#537cb9c2"
+                  middleBg="#32409baa"
+                  lastBg={"#0283918f"}
                   text={"What i have made"}
                   icon={<IoIosCodeWorking />}
                   slug={"/#"}
                   title={"Project"}
-                  textColor={"red"}
-                  iconColor={"teal"}
+                  textColor={"#5fc3cedb"}
+                  iconColor={"#5fc3cedb"}
                 />
                 <GroupBtn
-                  firstBg={"fuchsia"}
-                  middleBg={"indigo"}
-                  lastBg={"pink"}
+                  firstBg={"#b9239dcd"}
+                  middleBg={"#68c9d4ac"}
+                  lastBg={"#398e0082"}
                   text={"Read about me"}
                   icon={<IoIosContact />}
                   slug={"/#"}
                   title={"About"}
-                  textColor={"red"}
-                  iconColor={"teal"}
+                  textColor={"#69e64d88"}
+                  iconColor={"#69e64d88"}
                 />
                 <GroupBtn
-                  firstBg={"fuchsia"}
-                  middleBg={"indigo"}
-                  lastBg={"pink"}
+                  firstBg={"#d79b418f"}
+                  middleBg={"#0283918f"}
+                  lastBg={"#3b52ecc9"}
                   text={"Download resume"}
                   icon={<IoIosPaper />}
                   slug={"/#"}
                   title={"Resume"}
-                  textColor={"red"}
-                  iconColor={"teal"}
+                  textColor={"#5a69c6c8"}
+                  iconColor={"#5a69c6c8"}
                 />
               </div>
             </div>
