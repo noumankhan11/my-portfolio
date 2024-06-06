@@ -4,6 +4,7 @@ import {
   HeroSection,
   SkillSection,
   Footer,
+  ProjectsSection,
 } from "../../components";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <SkillSection />
+      <ProjectsSection />
       <Footer />
     </div>
   );

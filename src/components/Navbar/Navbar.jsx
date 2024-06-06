@@ -55,7 +55,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <div className="w-full px-3 py-1 boder-2 dark:border-gray-200 dark:bg-[#082132] bg-zinc-100">
+    <div className="w-full  px-3 py-1 boder-2 dark:border-gray-200 dark:bg-[#082132] bg-zinc-100">
       <div className="nav relative w-full flex justify-between items-center">
         <div className="nav_left">
           <div className="logo w-[] p-1">

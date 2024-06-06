@@ -32,9 +32,9 @@ export default function Footer() {
     <div className="h-[vh] w-full bg-gray-100 dark:bg-[#183549] pt-5  pb-0 border-t-gray-200 dark:border-t-gray-600 border-t-2">
       <div className="">
         <div className="icons">
-          <div className="w-[80%] bg-gray-00 mx-auto p-4 flex items-center justify-center gap-[3vw]">
+          <div className="w-[95%] bg-gray-00 mx-auto p-4 flex items-center justify-center gap-[3vw]">
             {socialData.map((item) => (
-              <div className="icn w-12 bg-white p-3 rounded-full shadow-xl">
+              <div className="icn w-12 bg-white p-[2vw] sm:p-3 rounded-full shadow-xl">
                 <img src={`./images/${item.path}.svg`} alt="" />
               </div>
             ))}
@@ -54,7 +54,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="bottomFooter w-full mt-4 p-3 bg-gray-200 dark:bg-[#dfdfdf0e]">
+      <div className="bottomFooter w-full mt-4 p-[5px] bg-gray-200 dark:bg-[#dfdfdf0e]">
         <h3 className="text-center text-gray-800 dark:text-gray-300 font-semibold">
           Nouman Khan © all right reserved
         </h3>
