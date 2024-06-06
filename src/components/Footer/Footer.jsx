@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   const socialData = [
@@ -28,6 +29,24 @@ export default function Footer() {
     },
   ];
 
+  const links = [
+    {
+      title: "Projects",
+      slug: "/projects",
+      id: 2,
+    },
+    {
+      title: "Contact",
+      slug: "/contact",
+      id: 4,
+    },
+    {
+      title: "About",
+      slug: "/about",
+      id: 3,
+    },
+  ];
+
   return (
     <div className="h-[vh] w-full bg-gray-100 dark:bg-[#183549] pt-5  pb-0 border-t-gray-200 dark:border-t-gray-600 border-t-2">
       <div className="">
@@ -42,15 +61,20 @@ export default function Footer() {
         </div>
         <div className="footerMenu w-full py-3 text-gray-800 dark:text-gray-200 ">
           <ul className="w-full flex justify-center gap-[5vw] font-semibold">
-            <li className="px-2 py-1 shadow-lg rounded bg-[#dfdfdf0e]">
-              Projects
-            </li>
-            <li className="px-2 py-1 shadow-lg rounded bg-[#dfdfdf0e]">
+            {links.map((link) => (
+              <NavLink
+                to={link.slug}
+                className="px-2 py-1 shadow-lg rounded bg-[#dfdfdf0e]">
+                {link.title}
+              </NavLink>
+            ))}
+
+            {/* <li className="px-2 py-1 shadow-lg rounded bg-[#dfdfdf0e]">
               Contact
             </li>
             <li className="px-2 py-1 shadow-lg rounded bg-[#dfdfdf0e]">
               About
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

@@ -35,7 +35,7 @@ export default function Navbar() {
   const links = [
     {
       title: "Home",
-      slug: "/home",
+      slug: "/",
       id: 2,
     },
     {
@@ -73,11 +73,12 @@ export default function Navbar() {
         <div className="nav_center-menu hidden sm:block">
           <ul className="menu flex text-black gap-10 ">
             {links.map((link) => (
-              <li
+              <NavLink
+                to={link.slug}
                 key={link.id}
                 className={`nav-link font-semibold cursor-pointer dark:text-white`}>
                 {link.title}
-              </li>
+              </NavLink>
             ))}
           </ul>
         </div>

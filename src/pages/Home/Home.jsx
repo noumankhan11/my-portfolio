@@ -10,11 +10,9 @@ import {
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <HeroSection />
       <SkillSection />
       <ProjectsSection />
-      <Footer />
     </div>
   );
 }
