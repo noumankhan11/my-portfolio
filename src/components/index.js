@@ -4,7 +4,8 @@ import HeroSection from "./HeroSection/HeroSection";
 import Navbar from "./Navbar/Navbar";
 import ProjectsSection from "./ProjectsSection/ProjectsSection";
 import SkillSection from "./SkillSection/SkillSection";
-
+import IconLogo from "./IconLogo";
+import CardForAbout from "./CardForAbout";
 export {
   Navbar,
   HeroSection,
@@ -12,4 +13,6 @@ export {
   SkillSection,
   Footer,
   ProjectsSection,
+  IconLogo,
+  CardForAbout,
 };

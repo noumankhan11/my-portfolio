@@ -92,7 +92,7 @@ export default function SkillSection() {
                 </div>
               ))}
             </div>
-            <div className="w-full bg-gray-00 h-[vh] text-center py-5">
+            <div className="w-full text-center py-5">
               <p className="text-base md:text-lg text-gray-800 p-2 px-2  lg:p-5 lg:px-7 dark:text-gray-200">
                 I have been learning web development for more than a
                 year. I have worked with{" "}

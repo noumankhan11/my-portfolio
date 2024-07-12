@@ -1,6 +1,7 @@
 import React from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { MdOutlineIosShare } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 export default function Projects() {
   const projectsData = [
@@ -31,15 +32,14 @@ export default function Projects() {
   ];
   return (
     <div>
-      <div
-        className={`min-h-screen bg-white dark:bg-transparent px-1  sm:p-4 `}>
+      <div className={` bg-white dark:bg-transparent px-1  sm:p-4 `}>
         <h1 className="text-center relative z-10 text-gray-800 dark:text-gray-200 text-3xl sm:text-4xl  font-bold py-3">
           Projects
         </h1>
 
         <div className="container w-full px-0 md:px-2 p-2 flex mx-auto items-center justify-center flex-wrap gap-8 ">
           {projectsData.map((item) => (
-            <div className="box relative dark:bg-[#01030610] flex-1 basis-[250px] grow max-w-[340px] lg:max-w-[400px] h-[350px] border-black border- shadow-2xl my-1 p-2 rounded-xl overflow-hidden">
+            <div className="box relative dark:bg-[#89898a15] flex-1 basis-[250px] grow max-w-[340px] lg:max-w-[400px] h-[350px] border-black border- shadow-2xl my-1 p-2 rounded-xl overflow-hidden">
               <div className="">
                 <div className="topImg relative h-[55%] rounded overflow-hidden">
                   <img
@@ -76,7 +76,7 @@ export default function Projects() {
         </div>
         <div className="text-center py-3 text-gray-700 dark:text-gray-200 cursor-pointer ">
           <button className="w-fit rounded shadow-xl py-2 px-4 bg-gray-100 dark:bg-[#00000039] dark:hover:text-gray-100 dark:hover:bg-[#49494935]  duration-100">
-            See all
+            <NavLink to={Projects}>See all</NavLink>
           </button>
         </div>
       </div>
