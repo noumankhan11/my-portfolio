@@ -14,11 +14,11 @@ export default function Navbar() {
   const currentTheme = useSelector((state) => state.theme);
   const [DarkMode, setDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isUserLogedIn, setIsUserLogedIn] = useState(true);
   const dispatch = useDispatch();
   const handleDarkMode = () => {
     dispatch(toggleDarkMode());
     setDarkMode((prev) => !prev);
-    console.log(currentTheme);
   };
   useEffect(() => {
     if (DarkMode) {
@@ -58,7 +58,7 @@ export default function Navbar() {
     <div className="w-full  px-3 py-1 boder-2 dark:border-gray-200 dark:bg-[#082132] bg-zinc-100">
       <div className="nav relative w-full flex justify-between items-center">
         <div className="nav_left">
-          <div className="logo w-[] p-1">
+          <div className="logo p-1">
             <img
               src={`${
                 DarkMode
@@ -81,6 +81,28 @@ export default function Navbar() {
               </NavLink>
             ))}
           </ul>
+        </div>
+        <div className="login/logout">
+          {!isUserLogedIn ? (
+            <>
+              <button
+                onClick={() => setIsUserLogedIn(true)}
+                className="btn-primary mr-2">
+                <NavLink to={"/signup"}>Sign Up</NavLink>
+              </button>
+              <button
+                onClick={() => setIsUserLogedIn(true)}
+                className="btn-primary ml-2">
+                <NavLink to={"/login"}>Log In</NavLink>
+              </button>
+            </>
+          ) : (
+            <button
+              onClick={() => setIsUserLogedIn(false)}
+              className="btn-primary">
+              <NavLink to={"/"}>Log Out</NavLink>
+            </button>
+          )}
         </div>
         <div className="icons text-black flex gap-3">
           <li
